@@ -1,0 +1,135 @@
+.formContainer {
+    padding: 20px;
+    margin: 20px 40px;
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+}
+
+.heading {
+    composes: baseHeading from "../../../../../index.css";
+}
+
+.login,
+.password,
+.email {
+    min-width: 280px;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-bottom: var(--border-bottom-opacity);
+}
+
+.login:focus-visible,
+.password:focus-visible,
+.email:focus-visible {
+    border-bottom: var(--border-bottom-active);
+    outline: none;
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.labelForInput {
+    padding-right: 20px;
+    font-size: var(--font-size);
+    color: var(--color-gray);
+}
+
+.generalErrorText,
+.errorText {
+    display: block;
+    margin-top: 5px;
+    color: var(--color-red);
+}
+
+.generalErrorText {
+    font-size: var(--font-size-small);
+}
+
+.authLinkWrapper {
+    margin: 20px;
+}
+
+.authLink {
+    color: var(--color-green);
+    cursor: pointer;
+}
+
+.authButton {
+    font-size: var(--font-size-big);
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid var(--color-green);
+    background: none;
+    color: var(--color-green);
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.btnSave,
+.btnCancel {
+    composes: baseButton from "../../../../../index.css";
+    width: 150px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.btnSave {
+    margin-right: 5px;
+    background-color: var(--color-green);
+}
+
+.btnCancel {
+    background-color: var(--color-gray);
+}
+
+@media (max-width: 480px) {
+    .formContainer {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .heading {
+        font-size: var(--font-size-middle);
+    }
+
+    .login,
+    .email,
+    .password {
+        min-width: 100%;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .labelForInput {
+        display: none;
+    }
+
+    .inputWrapper {
+        font-size: var(--font-size-small);
+    }
+
+    .errorText {
+        font-size: var(--font-size-small);
+    }
+}
+
+@media (max-width: 220px) {
+    .btnContainer {
+        flex-direction: column;
+    }
+
+    .btnSave {
+        margin-bottom: 5px;
+    }
+}
