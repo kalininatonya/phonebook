@@ -1,0 +1,22 @@
+.addContainer {
+    padding: 20px;
+    margin: 20px 40px;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+}
+
+.heading {
+    composes: baseHeading from "../../../index.css";
+}
+
+@media (max-width: 480px) {
+    .addContainer {
+        padding: 10px;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .heading {
+        font-size: var(--font-size-middle);
+    }
+}
