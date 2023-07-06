@@ -1,0 +1,38 @@
+.pagesContainer {
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 5px;
+    width: 200px;
+}
+
+.page {
+    cursor: pointer;
+    padding: 3px;
+    color: grey;
+    margin: 5px;
+}
+
+.togglePage {
+    cursor: pointer;
+    padding: 3px 9px;
+    color: gray;
+    border: none;
+    background: none;
+    margin: 3px;
+}
+
+.togglePage:focus {
+    color: #5397a8;
+    outline: none;
+}
+
+.selectedPage {
+    cursor: pointer;
+    padding: 3px 6px;
+    background: #5397a8;
+    color: white;
+    border-radius: 3px;
+    margin: 5px;
+}
