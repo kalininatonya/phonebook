@@ -1,0 +1,95 @@
+.modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modalOverlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-gray);
+    opacity: 50%;
+}
+
+.modalContent {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 30%;
+    max-width: 360px;
+    min-width: 150px;
+    margin: auto;
+    padding: 20px;
+    z-index: var(--z-index-modal-confirmation);
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+}
+
+.modalContent h2 {
+    margin: 0 30px 15px;
+}
+
+.modalIconClose {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    width: 20px;
+    height: 21px;
+    cursor: pointer;
+    background: url('../../../icons/close.svg') no-repeat;
+    border: none;
+}
+
+.modalIconClose:hover {
+    transform: scale(1.2);
+}
+
+.modalText {
+    margin-bottom: 20px;
+}
+
+.btnSave,
+.btnClose {
+    composes: baseButton from "../../../index.css";
+    width: 150px;
+    cursor: pointer;
+    color: var(--color-white);
+}
+
+.btnSave {
+    margin-right: 5px;
+    background-color: var(--color-blue);
+}
+
+.btnClose {
+    background-color: var(--color-gray);
+}
+
+.btnSave:hover,
+.btnClose:hover {
+    background-color: var(--color-blue-hover);
+    border-color: var(--color-blue-hover);
+}
+
+@media (max-width: 420px) {
+    .modalContent {
+        padding: 10px;
+    }
+
+    .modalContent > h2 {
+        margin: 0 10px 10px;
+        font-size: var(--font-size-middle);
+    }
+
+    .btnSave,
+    .btnClose {
+        width: 80px;
+        margin-bottom: 5px;
+    }
+
+    .modalIconClose {
+        display: none;
+    }
+}
