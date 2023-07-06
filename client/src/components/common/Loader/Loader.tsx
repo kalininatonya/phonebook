@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {sizes} from '../../../constants';
 import loader from '../../../icons/loader.gif';
 import {LoaderProps} from './models/loaderProps';

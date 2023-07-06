@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {Link, useNavigate} from 'react-router-dom';
 import {useForm, SubmitHandler} from 'react-hook-form';
