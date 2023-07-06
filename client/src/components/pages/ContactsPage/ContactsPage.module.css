@@ -1,0 +1,100 @@
+.mainContainer {
+    background-color: var(--color-background);
+}
+
+.addContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px 40px;
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px var(--color-shadow);
+}
+
+.searchWrapper {
+    display: flex;
+}
+
+.searchInput {
+    padding: 8px;
+    min-width: 350px;
+    border: 1px solid var(--color-gray);
+    border-radius: var(--border-radius);
+}
+
+.searchButton {
+    border: none;
+    background: none;
+}
+
+.searchIcon {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    stroke: var(--color-dark-gray);
+}
+
+.searchIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.linkAddContact {
+    composes: baseButton from "../../../index.css";
+    max-width: 200px;
+    padding: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--color-green);
+}
+
+.linkAddContact:hover {
+    background-color: var(--color-green-hover);
+}
+
+.linkAddContactDisabled {
+    cursor: none;
+    background-color: var(--color-button-disabled);
+}
+
+.linkAddContactDisabled:hover {
+    cursor: none;
+    background-color: var(--color-button-disabled);
+}
+
+.heading {
+    composes: baseHeading from "../../../index.css";
+}
+
+.warning {
+    display: block;
+    padding: 40px;
+    margin: 20px 40px;
+    text-align: center;
+    background-color: var(--color-green-opacity);
+    border-radius: var(--border-radius);
+}
+
+@media (max-width: 630px) {
+    .addContainer {
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        font-size: var(--font-size-small);
+        border-radius: 0;
+    }
+
+    .addContainer > a {
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .searchInput {
+        min-width: 150px;
+    }
+}
