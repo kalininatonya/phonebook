@@ -1,0 +1,61 @@
+.contactContainer {
+    display: grid;
+    grid-gap: 2vw;
+    grid-template-columns: 1fr 1fr 1fr 100px;
+    padding: 20px;
+    margin: 20px 40px;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+}
+
+.iconsContainer {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.iconDeleteWrapper {
+    border: none;
+    background: none;
+}
+
+.iconDelete,
+.iconEdit {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    stroke: var(--color-dark-gray);
+}
+
+.iconDelete:hover,
+.iconEdit:hover {
+    cursor: pointer;
+    stroke: var(--color-green);
+}
+
+@media (max-width: 630px) {
+    .contactContainer {
+        grid-template-areas:
+        "."
+        "."
+        "iconsContainer";
+        grid-template-rows: 1fr 1fr 40px;
+        grid-template-columns: 1fr;
+        grid-column-gap: 5px;
+        grid-gap: 0;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .iconsContainer {
+        grid-area: iconsContainer;
+        margin-top: 15px;
+    }
+
+    .iconDelete,
+    .iconEdit {
+        width: 30px;
+        height: 30px;
+    }
+}
