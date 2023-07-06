@@ -1,0 +1,30 @@
+.header {
+    width: 100%;
+    background-color: var(--color-dark-blue);
+    box-shadow: 0 2px 4px var(--color-shadow);
+}
+
+.headerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 28px;
+    color: var(--color-white);
+}
+
+.authLink {
+    margin-left: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-white);
+}
+
+.authLink:hover {
+    color: var(--color-green);
+}
+
+.authenticated {
+    display: flex;
+}
